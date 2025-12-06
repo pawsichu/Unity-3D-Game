@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource SFXSource;
 
     public AudioClip background;
-    public AudioClip jumpSFX;
+    public AudioClip eatSFX;
     public AudioClip walkSFX;
     public AudioClip deathSFX;
     public AudioClip interactSFX;

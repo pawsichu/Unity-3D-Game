@@ -2260,7 +2260,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 191218919}
         m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
-        m_MethodName: changeScene
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1011,16 +1011,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7787460764258613499, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8022526765137836157, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 695691827}
   m_SourcePrefab: {fileID: 100100000, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
 --- !u!4 &695691825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5783591034793141320, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
   m_PrefabInstance: {fileID: 695691824}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &695691826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022526765137836157, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
+  m_PrefabInstance: {fileID: 695691824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &695691827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695691826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9054f90c115faf46bdd34ceee28c141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  jumpHeight: 3
+  gravity: -19.62
+  groundCheck: {fileID: 695691825}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &808444041
 GameObject:
   m_ObjectHideFlags: 0

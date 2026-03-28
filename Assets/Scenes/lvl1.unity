@@ -1018,7 +1018,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8022526765137836157, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 695691827}
+      addedObject: {fileID: 695691832}
   m_SourcePrefab: {fileID: 100100000, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
 --- !u!4 &695691825 stripped
 Transform:
@@ -1030,7 +1030,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8022526765137836157, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
   m_PrefabInstance: {fileID: 695691824}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &695691827
+--- !u!54 &695691829 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8330747451627349883, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
+  m_PrefabInstance: {fileID: 695691824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &695691830 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 926209335206545101, guid: 7f7235a04a13a354c86d7ed10fe76cf9, type: 3}
+  m_PrefabInstance: {fileID: 695691824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &695691832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1039,17 +1049,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 695691826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9054f90c115faf46bdd34ceee28c141, type: 3}
+  m_Script: {fileID: 11500000, guid: 439d0e7de6e52e740ac4a0f47fd217d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
-  jumpHeight: 3
-  gravity: -19.62
-  groundCheck: {fileID: 695691825}
-  groundDistance: 0.4
-  groundMask:
+  speed: 5
+  jumpForce: 5
+  groundDist: 0.2
+  mouseSensitivity: 1
+  lockCursor: 1
+  groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
+  groundCheck: {fileID: 695691825}
+  rb: {fileID: 695691829}
+  sr: {fileID: 695691830}
 --- !u!1 &808444041
 GameObject:
   m_ObjectHideFlags: 0

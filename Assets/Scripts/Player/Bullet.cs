@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] public int damages = 10;
+
     public GameObject bulletObject;
     public float shootingCoolDown = 0.5f;
     public float shootSpeed = 40f;
@@ -13,7 +15,7 @@ public class Bullet : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
             timer = 0f;
@@ -30,5 +32,20 @@ public class Bullet : MonoBehaviour
             rb.linearVelocity = direction * shootSpeed;
 
         Destroy(bullet, 4f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("is attacking");
+            int damage = Random.Range(10, 30);
+            Enemy enemyHealth = collision.gameObject.GetComponent<Enemy>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.EnemyTakeDamage(damage);
+            }
+        }
+
     }
 }
